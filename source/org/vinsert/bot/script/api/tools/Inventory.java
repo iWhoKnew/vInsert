@@ -420,4 +420,12 @@ public class Inventory {
 		}
 	}
 	
+		public void dropAllExcept(Item item) {
+		for(Item i : getItems()) {
+			if(i.getId() != 0) {
+				interact(indexOf(i), "Drop");
+			}
+		}
+	}
+	
 }
